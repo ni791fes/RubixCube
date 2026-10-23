@@ -23,4 +23,5 @@ jobs:
         uses: sbt/setup-sbt@v1
 
       - name: Run tests
+        working-directory: ./rubixcube
         run: sbt test
