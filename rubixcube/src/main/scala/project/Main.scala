@@ -29,6 +29,7 @@ def loop(cube: Cube): Unit =
       loop(cube)
     case move if move.matches("[FRUBLD](2|')?") => 
       val newCube = handleMove(cube, move)
+      render(newCube)
       loop(newCube)
     case _ => 
       typo(input)
