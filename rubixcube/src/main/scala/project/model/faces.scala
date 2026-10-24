@@ -1,10 +1,16 @@
 package project.model
 
 enum Color:
-  case White, Yellow, Red, Orange, Green, Blue
+  case Red, Orange, White, Yellow, Blue, Green
 
-enum Side:
-  case Up, Down, Front, Back, Left, Right
+case class Cube(
+  w: List[List[Color]],
+  y: List[List[Color]],
+  g: List[List[Color]],
+  b: List[List[Color]],
+  r: List[List[Color]],
+  o: List[List[Color]]
+)
 
 
 
