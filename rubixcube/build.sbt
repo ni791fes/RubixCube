@@ -5,6 +5,7 @@ lazy val root = project
   .settings(
     name := "RubixCube",
     version := "0.1.0-SNAPSHOT",
+    coverageExcludedFiles := ".*Main;.*rotations",
 
     scalaVersion := scala3Version,
     libraryDependencies ++= Seq(
