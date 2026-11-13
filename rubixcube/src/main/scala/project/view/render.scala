@@ -8,10 +8,8 @@ val emptyScreen = List.fill(11)(List.fill(14)("  "))
 
 //main render funktion
 def render(cube: Cube): Unit = 
-  println("\n")
   val updatedMatrix = drawCubeNet(cube)
   printMatrix(updatedMatrix)
-  println("\n")
 
 
 //Faces in den Screen ein zeichnen
