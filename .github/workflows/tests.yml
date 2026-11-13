@@ -24,4 +24,11 @@ jobs:
 
       - name: Run tests
         working-directory: ./rubixcube
-        run: sbt test
+        run: sbt clean coverage test coverageReport
+
+      - name: upload coverage to coveralls
+        uses: coverallsapp/github-action@v2
+        with: 
+          github-token: ${{ secrets.COVERALL }}
+          file: rubixcube/target/scala-3.10.0/coverage-report/cobertura.xml
+          format: cobertura
