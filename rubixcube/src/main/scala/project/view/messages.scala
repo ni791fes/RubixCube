@@ -8,4 +8,4 @@ def typo(arg: String): Unit =
 
 
 def helpMenu(): Unit =
-  println("Moves: F R U B L D; sufix: 2, '; quit = q")
+  println("Moves: F R U B L D; sufix: 2, '; quit = q; scramble <moves>")

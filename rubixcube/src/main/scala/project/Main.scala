@@ -5,10 +5,11 @@ import project.controller.*
 import project.view.*
 
 @main def run(): Unit =
-  println("Cube in Progress...")
   println("for Info type: help")
-  val controller = new Controller
-  loop(Cube.initialCube, controller)
+  val start = Cube.solvedCube
+  val controller = new Controller(List(Tui))
+  Tui.update(start)
+  Tui.loop(start, controller)
 
 
 
