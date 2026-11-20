@@ -16,7 +16,7 @@ class View_DrawTest extends FunSuite:
 
 
   test("drawCubeNet should draw all six faces"):
-    val result = drawCubeNet(Cube.initialCube)
+    val result = drawCubeNet(Cube.solvedCube)
 
     assertEquals(result(4)(1), colorSquare(Color.Green))
     assertEquals(result(4)(4), colorSquare(Color.White))

@@ -2,10 +2,11 @@ package project.controller
 
 import munit.FunSuite
 import project.model.*
+import project.view.*
 
 class ControllerTest extends FunSuite:
 
-  val controller = new Controller
+  val controller = new Controller(List(Tui))
 
   test("valid moves should be accepted"):
     assert(controller.isValidMove("R"))
@@ -20,7 +21,7 @@ class ControllerTest extends FunSuite:
     assert(!controller.isValidMove("RR"))
 
   test("handleMove should return the unchanged cube"):
-    val cube = Cube.initialCube
+    val cube = Cube.solvedCube
 
     val result = controller.handleMove(cube, "R")
 

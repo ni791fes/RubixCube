@@ -11,7 +11,7 @@ class View_RenderingTest extends FunSuite:
     val output = new ByteArrayOutputStream()
 
     Console.withOut(new PrintStream(output)):
-      render(Cube.initialCube)
+      render(Cube.solvedCube)
 
     assert(output.toString.contains("\u001b[48;5;15m"))
     assert(output.toString.contains("\u001b[48;5;226m"))
