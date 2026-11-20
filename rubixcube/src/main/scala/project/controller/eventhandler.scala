@@ -25,7 +25,7 @@ class Controller(val observers: List[Observer]) extends Observable:
     newCube
 
   def reset(): Cube =
-    val newCube = Cube.scrambledCube
+    val newCube = Cube.solvedCube
     notifyObservers(newCube)
     newCube
 

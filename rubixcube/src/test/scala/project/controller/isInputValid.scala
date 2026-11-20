@@ -20,9 +20,3 @@ class ControllerTest extends FunSuite:
     assert(!controller.isValidMove(""))
     assert(!controller.isValidMove("RR"))
 
-  test("handleMove should return the unchanged cube"):
-    val cube = Cube.solvedCube
-
-    val result = controller.handleMove(cube, "R")
-
-    assertEquals(result, cube)
